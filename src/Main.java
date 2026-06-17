@@ -11,5 +11,6 @@ public class Main {
         double c = 1;
         boolean d = true;
         char g = 'a';
+        System.out.println(a);
     }
 }
