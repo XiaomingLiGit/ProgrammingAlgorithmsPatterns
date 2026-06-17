@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 // Topic: basic data types
 public class Main {
@@ -11,6 +9,6 @@ public class Main {
         double c = 1;
         boolean d = true;
         char g = 'a';
-        System.out.println(a);
+        System.out.println("basic data types");
     }
 }
