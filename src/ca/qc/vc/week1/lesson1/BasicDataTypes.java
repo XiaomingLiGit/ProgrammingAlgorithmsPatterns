@@ -4,7 +4,6 @@ package ca.qc.vc.week1.lesson1;
  * this code snippet shows the eight basic data types in Java
  */
 public class BasicDataTypes {
-
     public static void main(String[] args) {
         byte smallNumber = 100;
         short shortNumber = 30000;
