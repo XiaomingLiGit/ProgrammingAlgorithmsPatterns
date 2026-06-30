@@ -1,1 +1,1 @@
-Code repository for the course Programming Algorithms and Patterns at Vanier College in 2026
+Code repository for the course Programming Algorithms and Patterns at Vanier College in summer 2026
