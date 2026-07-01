@@ -1,5 +1,10 @@
 package ca.qc.vc.week1.lesson3;
 
+/**
+ * This demo displays a Spring MVC handler adapter
+ *
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
