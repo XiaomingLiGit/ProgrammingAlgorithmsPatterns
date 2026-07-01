@@ -1,6 +1,5 @@
 package ca.qc.vc.week1.lesson3;
 
-
 import java.util.HashSet;
 
 class Book {

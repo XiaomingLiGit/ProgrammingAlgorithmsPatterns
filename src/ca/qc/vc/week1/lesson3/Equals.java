@@ -12,7 +12,6 @@ public class Equals {
     }
 }
 
-
 //class Book {
 //    String title;
 //
