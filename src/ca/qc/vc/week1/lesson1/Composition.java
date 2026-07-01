@@ -37,4 +37,9 @@ class Car {
 }
 
 public class Composition {
+    public static void main(String[] args) {
+        Engine engine = new Engine();
+        Wheel[] wheel = new Wheel[4];
+
+    }
 }
