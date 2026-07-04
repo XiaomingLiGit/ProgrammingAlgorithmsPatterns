@@ -6,6 +6,19 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+
+
+
 ### Eclipse ###
 .apt_generated
 .classpath
