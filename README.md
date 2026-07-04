@@ -1,6 +1,9 @@
 Code repository for the course Programming Algorithms and Patterns at Vanier College in summer 2026
 
+This repository contains examples and hands-on exercises in Java and Python.
 
+- `src/`: Java implementations and course examples
+- `python/`: Python implementations and course examples
 
 # Pattern list
 ## Creational: 
