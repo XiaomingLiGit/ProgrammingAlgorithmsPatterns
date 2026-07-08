@@ -19,11 +19,12 @@ public class DowncastingTest {
     }
 
     public static void main(String[] args) {
-        Animal a1 = getAnimal(true);
-        Animal a2 = getAnimal(false);
+        Animal a1 = getAnimal(true);       // create a dog (upcasting as an animal)
+        Animal a2 = getAnimal(false);      // create an animal
 
         // Unsafe downcast: might throw ClassCastException
         Dog d1 = (Dog) a1;
+        System.out.println(a1 instanceof Dog);     // true
         d1.bark();  // prints "Woof!"
 
         try {
