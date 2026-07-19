@@ -4,6 +4,8 @@ package ca.qc.vc.week1.lesson3;
  * this file shows an example using Factory design pattern,
  * with the application in logistics systems
  */
+
+// shipping provider is the abstract factory
 interface ShippingProvider {
     ShippingLabel createLabel(Order order);
 }
@@ -53,6 +55,7 @@ class ShippingLabel {
     }
 }
 
+// facotry 1
 class FedExProvider implements ShippingProvider {
 
     @Override
@@ -75,7 +78,7 @@ class FedExProvider implements ShippingProvider {
         );
     }
 }
-
+// facotry 2
 class UPSProvider implements ShippingProvider {
 
     @Override
@@ -98,7 +101,7 @@ class UPSProvider implements ShippingProvider {
         );
     }
 }
-
+// facotry 3
 class DHLProvider implements ShippingProvider {
 
     @Override
@@ -121,6 +124,8 @@ class DHLProvider implements ShippingProvider {
         );
     }
 }
+
+
 
 
 public class ShippingTest {

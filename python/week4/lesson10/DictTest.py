@@ -12,3 +12,4 @@ for name, score in students.items():
     print(name, score)
 
 students.pop("Bob")
+

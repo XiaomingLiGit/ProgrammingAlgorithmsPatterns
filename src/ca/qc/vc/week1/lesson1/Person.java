@@ -5,6 +5,10 @@ public class Person {
     private String name;
     private int age;  // internal state hidden
 
+    public Person(String name) {
+        this.name = name;
+    }
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -30,4 +34,19 @@ public class Person {
             this.age = age;
         }
     }
+
+    public static void main(String[] args){
+
+        final Person p = new Person("Tom");
+        p.setName("Jerry");
+
+
+
+//        p = new Person("Jerry");
+
+
+
+//        Person[] person_list
+    }
+
 }

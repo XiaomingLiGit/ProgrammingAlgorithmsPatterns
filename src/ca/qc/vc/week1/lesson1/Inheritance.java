@@ -26,5 +26,14 @@ class StripeProcessor implements PaymentProcessor {
 }
 
 
+class CreditCardProcessor implements PaymentProcessor {
+    @Override
+    public void processPayment(double amount) {}
+}
+
+
 public class Inheritance {
+    public static void main(String[] args) {
+
+    }
 }

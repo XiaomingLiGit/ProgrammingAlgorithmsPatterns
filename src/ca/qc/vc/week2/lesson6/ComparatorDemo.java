@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+// this class represents a set of rules
 class NameComparator implements Comparator<Student> {
 
     @Override

@@ -18,13 +18,13 @@ class Intern extends Employee {
 }
 
 public class WildcardTest {
-    // producer
+    // producer, read from the list
     public static void printNames(List<? extends Employee> employees) {
         for (Employee e : employees) {
             System.out.println(e.getName());
         }
     }
-    // consumer
+    // consumer, write to the list
     public static void addEmployees(List<? super Employee> list) {
         list.add(new Manager());
         list.add(new Intern());
@@ -34,6 +34,7 @@ public class WildcardTest {
         List<Employee> employeeList = new ArrayList<>();
         List<Manager> managerList = new ArrayList<>();
         List<Intern> internList = new ArrayList<>();
+
 
         addEmployees(employeeList);
 

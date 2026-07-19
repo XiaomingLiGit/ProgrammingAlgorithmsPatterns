@@ -1,5 +1,9 @@
 package ca.qc.vc.week1.lesson1;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * this code snippet shows the eight basic data types in Java
  */
@@ -16,6 +20,7 @@ public class BasicDataTypes {
         char grade = 'A';
         boolean isJavaFun = true;
 
+
         System.out.println("byte: " + smallNumber);
         System.out.println("short: " + shortNumber);
         System.out.println("int: " + age);
@@ -25,4 +30,6 @@ public class BasicDataTypes {
         System.out.println("char: " + grade);
         System.out.println("boolean: " + isJavaFun);
     }
+
+
 }
