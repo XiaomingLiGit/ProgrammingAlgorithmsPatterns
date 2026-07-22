@@ -40,11 +40,11 @@ public class HashSetObjectDemo {
     }
 
     private static void hashset() {
-        HashSet hs = new HashSet();
+        HashSet<HashSetObjectDemo> hs = new HashSet<>();
         hs.add(new HashSetObjectDemo("1", "Tom"));
         hs.add(new HashSetObjectDemo("2", "Jerry"));
         hs.add(new HashSetObjectDemo("1", "Tom"));
-        Iterator iterator = hs.iterator();
+        Iterator<HashSetObjectDemo> iterator = hs.iterator();
         while (iterator.hasNext()) {
             HashSetObjectDemo s = (HashSetObjectDemo) iterator.next();
 
