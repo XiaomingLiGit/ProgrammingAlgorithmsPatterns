@@ -1,4 +1,4 @@
-package ca.qc.vc.week5.lesson13;
+package ca.qc.vc.week5.lesson14;
 
 import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
@@ -9,7 +9,7 @@ public class IntStreamDemo {
         int[] values = {3, 4, 1, 5, 20, 1, 3, 3, 4, 6};
 
         System.out.println("The average of distinct even numbers > 3: " +
-                IntStream.of(values).distinct()
+                IntStream.of(values).distinct()               // [4, 6, 20] = 10
                         .filter(e -> e > 3 && e % 2 == 0).average().getAsDouble());
 
         System.out.println("The sum of the first 4 numbers is " +

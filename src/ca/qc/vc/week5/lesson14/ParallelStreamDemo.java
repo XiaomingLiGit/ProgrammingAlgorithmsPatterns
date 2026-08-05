@@ -1,4 +1,4 @@
-package ca.qc.vc.week5.lesson13;
+package ca.qc.vc.week5.lesson14;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -12,6 +12,7 @@ public class ParallelStreamDemo {
         System.out.println("Number of processors: " +
                 Runtime.getRuntime().availableProcessors());
 
+        //  sequential stream
         long startTime = System.currentTimeMillis();
         int[] list1 = IntStream.of(list).filter(e -> e > 0).sorted()
                 .limit(5).toArray();
@@ -20,6 +21,7 @@ public class ParallelStreamDemo {
         System.out.println("Sequential execution time is " +
                 (endTime - startTime) + " milliseconds");
 
+        // parallel stream
         startTime = System.currentTimeMillis();
         int[] list2 = IntStream.of(list).parallel().filter(e -> e > 0)
                 .sorted().limit(5).toArray();

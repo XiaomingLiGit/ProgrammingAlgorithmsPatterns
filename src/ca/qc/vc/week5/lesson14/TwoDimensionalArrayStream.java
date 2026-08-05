@@ -1,4 +1,4 @@
-package ca.qc.vc.week5.lesson13;
+package ca.qc.vc.week5.lesson14;
 
 import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;

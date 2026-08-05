@@ -1,4 +1,4 @@
-package ca.qc.vc.week5.lesson13;
+package ca.qc.vc.week5.lesson14;
 
 import java.util.List;
 
@@ -10,6 +10,9 @@ public class StreamSorted {
                 .sorted((a, b) -> Integer.compare(b, a))
                 .toList();
 
+        System.out.println(descending);
+
+
         List<String> names =
                 List.of("Amy", "David", "Alice", "Bob", "David");
         List<String> sortedNames = names.stream()
@@ -19,8 +22,9 @@ public class StreamSorted {
                                         first.length(),
                                         second.length()
                                 )
-                )
-                .toList();
+                ).toList();
+
+        System.out.println(sortedNames);
 
     }
 }
