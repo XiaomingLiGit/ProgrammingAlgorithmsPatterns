@@ -40,6 +40,7 @@ public class DataStreamDemo {
             double score = in.readDouble();
             boolean passed = in.readBoolean();
 
+            System.out.println("read student info from the file: ");
             System.out.println("ID: " + id);
             System.out.println("Name: " + name);
             System.out.println("Score: " + score);

@@ -2,6 +2,8 @@ package solutions.midterm;
 
 import java.util.*;
 
+
+//   Map <K, V>,   {"aaa": 3, "bbb": 2, "ccc": 1}
 public class WordCounter {
     public static Map<String, Integer> wordFrequency(String sentence) {
         Map<String, Integer> freq = new HashMap<>();

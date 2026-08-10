@@ -21,15 +21,15 @@ class Snake implements Reptile{}
 
 
 
-public class MammalGP <? extends T> {
+public class MammalGP <T> {
 
 
 
     public static void main(String[] args) {
 
-        new MammalGP<Mammal>();
-        new MammalGP<Dog>();
-        new MammalGP<Cat>();
+//        new MammalGP<Mammal>();
+//        new MammalGP<Dog>();
+//        new MammalGP<Cat>();
 
 //        Number
 //

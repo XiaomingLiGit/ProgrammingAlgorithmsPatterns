@@ -9,7 +9,7 @@ public class ScannerFileExample {
     public static void main(String[] args) {
         try {
             Scanner fileScanner =
-                    new Scanner(new File("data.txt"));
+                    new Scanner(new File("test1.txt"));
 
             while (fileScanner.hasNextLine()) {
                 String line = fileScanner.nextLine();
