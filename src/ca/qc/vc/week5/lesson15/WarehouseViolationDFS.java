@@ -5,13 +5,30 @@ import java.util.*;
 // live coding interview question
 public class WarehouseViolationDFS {
 
+//    static char[][] grid = {
+//            {'.', 'S', 'F', 'F', '.'},
+//            {'S', 'C', 'F', '.', '.'},
+//            {'.', 'C', 'S', '.', '.'},
+//            {'.', '.', '.', 'C', 'F'},
+//            {'.', '.', '.', 'F', 'F'}
+//    };
+
+//    static char[][] grid = {
+//            {'.','.','.','.'},
+//            {'.','S','S','.'},
+//            {'.','S','S','.'},
+//            {'.','.','.','.'}
+//    };
+
     static char[][] grid = {
-            {'.', 'S', 'F', 'F', '.'},
-            {'S', 'C', 'F', '.', '.'},
-            {'.', 'C', 'S', '.', '.'},
-            {'.', '.', '.', 'C', 'F'},
-            {'.', '.', '.', 'F', 'F'}
+            {'C', 'S', 'C', '.', 'F', 'F', 'S'},
+            {'S', 'C', 'C', '.', 'F', 'F', 'F'},
+            {'.', '.', '.', '.', 'F', 'S', 'F'},
+            {'.', '.', '.', '.', '.', '.', '.'},
+            {'S', 'F', '.', 'C', 'S', 'F', '.'},
+            {'S', 'S', '.', 'S', 'S', '.', '.'}
     };
+
 
     static int numRow = grid.length;
     static int numColumn = grid[0].length;
@@ -23,7 +40,6 @@ public class WarehouseViolationDFS {
 
         for (int i = 0; i < numRow; i++) {
             for (int j = 0; j < numColumn; j++) {
-
                 List<Character> cluster = new ArrayList<>();
 
                 dfs(i, j, cluster);
@@ -31,6 +47,9 @@ public class WarehouseViolationDFS {
                 int chemicalCounter = count(cluster, 'C');
                 int flammableCounter = count(cluster, 'F');
 
+//              constraint 1: Chemical < 3
+//              constraint 2: Flammable < 5
+//              constraint 3: Chemical + Flammable = 1
                 if (chemicalCounter >= 3 ||
                         flammableCounter >= 5 ||
                         (chemicalCounter >= 1 && flammableCounter >= 1)) {
@@ -39,7 +58,6 @@ public class WarehouseViolationDFS {
                 }
             }
         }
-
         System.out.println("The number of violation is " + violationCounter);
     }
 
@@ -51,7 +69,6 @@ public class WarehouseViolationDFS {
 
             return;
         }
-
         visitedMatrix[row][column] = true;
         cluster.add(grid[row][column]);
 
