@@ -19,6 +19,7 @@ public class CheckedExceptionExample {
 
         } catch (FileNotFoundException e) {
             System.out.println("File not found. Please check the file path.");
+            e.printStackTrace();
         }
     }
 }

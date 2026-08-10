@@ -7,12 +7,23 @@ import java.util.List;
 
 // this class represents a set of rules
 class NameComparator implements Comparator<Student> {
-
     @Override
     public int compare(Student s1, Student s2) {
         return s1.getName().compareTo(s2.getName());
     }
 }
+
+
+class GPAComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student s1, Student s2) {
+        double diff =  s1.getGpa() - s2.getGpa();
+        if  (diff > 0) return 1;
+        else if (diff < 0) return -1;
+        else return 0;
+    }
+}
+
 
 public class ComparatorDemo {
     public static void main(String[] args) {
@@ -22,8 +33,11 @@ public class ComparatorDemo {
         students.add(new Student("Bob", 3.5));
         students.add(new Student("Charlie", 3.9));
 
+            //  sort by name
         Collections.sort(students, new NameComparator());
-
-        System.out.println(students);
+        System.out.println("after sorting by name: " + students);
+            //  sort by GPA
+        Collections.sort(students, new GPAComparator());
+        System.out.println("after sorting by GPA: " +students);
     }
 }

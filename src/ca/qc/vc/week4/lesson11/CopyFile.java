@@ -10,7 +10,8 @@ public class CopyFile {
                         new FileInputStream("source.txt");
                 FileOutputStream out =
                         new FileOutputStream("copy.txt")
-        ) {
+        )
+        {
             byte[] buffer = new byte[1024];
             int length;
 

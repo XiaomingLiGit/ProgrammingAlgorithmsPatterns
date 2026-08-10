@@ -12,17 +12,33 @@ public class CopyTextFile {
         try (
                 BufferedReader reader =
                         new BufferedReader(
-                                new FileReader("source.txt"));
+                                new FileReader("output.txt"));
 
                 BufferedWriter writer =
                         new BufferedWriter(
-                                new FileWriter("target.txt"))
-        ) {
-            String line;
+                                new FileWriter("target_even.txt"));
 
+                BufferedWriter writer_odd =
+                        new BufferedWriter(
+                        new FileWriter("target_odd.txt"))
+        )
+        {
+            String line;
+            int counter = 0;
             while ((line = reader.readLine()) != null) {
-                writer.write(line);
-                writer.newLine();
+
+                if(counter % 2 == 0)
+                {
+                    writer.write(line);
+                    writer.newLine();
+                }
+                else
+                {
+                    writer_odd.write(line);
+                    writer_odd.newLine();
+                }
+
+                counter++;
             }
         }
     }

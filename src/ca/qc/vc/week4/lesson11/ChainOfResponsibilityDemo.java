@@ -31,10 +31,8 @@ class BasicSupport extends SupportHandler {
         }
     }
 }
-
 // Handles level 2 requests
 class TechnicalSupport extends SupportHandler {
-
     @Override
     public void handleRequest(int level) {
         if (level == 2) {
@@ -45,10 +43,8 @@ class TechnicalSupport extends SupportHandler {
         }
     }
 }
-
 // Handles level 3 requests
 class ManagerSupport extends SupportHandler {
-
     @Override
     public void handleRequest(int level) {
         if (level == 3) {
@@ -60,9 +56,7 @@ class ManagerSupport extends SupportHandler {
 }
 
 public class ChainOfResponsibilityDemo {
-
     public static void main(String[] args) {
-
         // Create the concrete handlers
         SupportHandler basic = new BasicSupport();
         SupportHandler technical = new TechnicalSupport();
