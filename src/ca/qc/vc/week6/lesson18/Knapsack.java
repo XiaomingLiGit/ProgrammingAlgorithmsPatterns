@@ -1,4 +1,4 @@
-package ca.qc.vc.week6.lesson17;
+package ca.qc.vc.week6.lesson18;
 
 public class Knapsack {
 
