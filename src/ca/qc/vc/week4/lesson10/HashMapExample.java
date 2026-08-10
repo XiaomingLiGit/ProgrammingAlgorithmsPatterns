@@ -14,7 +14,7 @@ public class HashMapExample {
         map.put("1", "Tom");
         map.put("2", "Jerry");
         map.put("3", "Spike");
-        map.put("1", "Tom");
+        map.put("1", "Tomas");  // update the value of the key
 
         Set<Map.Entry<String, String>> entries = map.entrySet();
         Iterator<Map.Entry<String, String>> iterator = entries.iterator();

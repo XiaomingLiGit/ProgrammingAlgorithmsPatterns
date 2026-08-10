@@ -24,18 +24,24 @@ public class HashMapMutableKey {
     public static void main(String[] args) {
         HashMap<Student, String> map = new HashMap<>();
 
-        Student s = new Student("1001");
+        Student s1 = new Student("1001");
+        System.out.println("s1" + s1.hashCode());
+
+        Student s2 = new Student("1001");
+        System.out.println("s2" + s1.hashCode());
 
         // use a mutable object (student) as the key
-        map.put(s, "Alice");
+        map.put(s1, "Alice");
 
-        System.out.println(map.get(s));        // Alice
+        map.put(s2, "Alice");
 
-        // change the key of HashMap (by changing student id)
-        s.id = "2002";
-
-        System.out.println(map.get(s));        // null
-        System.out.println(map.containsKey(s)); // false
+//        System.out.println(map.get(s));        // Alice
+//
+//        // change the key of HashMap (by changing student id)
+//        s.id = "2002";
+//
+//        System.out.println(map.get(s));        // null
+//        System.out.println(map.containsKey(s)); // false
 
         System.out.println(map);               // data still exists
 
