@@ -10,23 +10,27 @@ public class SearchRotatedSortedArray {
         while (left <= right) {
 
             int mid = (left + right) / 2;
-
+            // find the target
             if (nums[mid] == target)
                 return mid;
-
+            // left part is ordered
             if (nums[left] <= nums[mid]) {
-
+                // target is in the left part (ordered)
                 if (target >= nums[left]
                         && target < nums[mid])
                     right = mid - 1;
+                // target is in the right part (unordered)
                 else
                     left = mid + 1;
 
-            } else {
-
+            }
+            // right part is ordered
+            else {
+                // target is in the right part (ordered)
                 if (target > nums[mid]
                         && target <= nums[right])
                     left = mid + 1;
+                    // target is in the left part (unordered)
                 else
                     right = mid - 1;
             }
